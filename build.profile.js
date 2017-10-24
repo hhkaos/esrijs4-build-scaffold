@@ -60,15 +60,45 @@ var profile = {
     // "app" is a sample path for your application
     // set this accordingly
     "app",
-    "dijit",
-    "dojo",
-    "dojox",
-    "dstore",
-    "dgrid",
-    "esri",
+    {
+      name: 'dijit',
+      location: '../node_modules/dijit',
+      trees: [
+        [".", ".", /(\/\.)|(~$)|(test|node_modules)/]
+      ]
+    },
+    {
+      name: 'dojo',
+      location: '../node_modules/dojo',
+      trees: [
+        [".", ".", /(\/\.)|(~$)|(test|node_modules)/]
+      ]
+    },
+    {
+      name: 'dojox',
+      location: '../node_modules/dojox'
+    },
+    {
+      name: 'dstore',
+      location: '../node_modules/dojo-dstore',
+      trees: [
+        [".", ".", /(\/\.)|(~$)|(test|txt|src|min|templates|node_modules)/]
+      ]
+    },
+    {
+      name: 'dgrid',
+      location: '../node_modules/dgrid',
+      trees: [
+        [".", ".", /(\/\.)|(~$)|(test|node_modules)/]
+      ]
+    },
+    {
+      name: 'esri',
+      location: '../node_modules/arcgis-js-api'
+    },
     {
       name: "moment",
-      location: "moment",
+      location: "../node_modules/moment",
       main: "moment",
       trees: [
           // don"t bother with .hidden, tests, min, src, and templates

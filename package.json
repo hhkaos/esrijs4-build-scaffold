@@ -7,8 +7,7 @@
     "url": "https://github.com/Esri/jsapi-resources/4.x/bower/dojo"
   },
   "scripts": {
-    "preinstall": "bower install",
-    "build": "grunt build",
+    "build": "node dojoconfig.js load=build --profile build.profile.js --releaseDir ../dist",
     "clean": "grunt clean",
     "styles": "grunt styles --force"
   },
@@ -23,5 +22,8 @@
     "gulp-clean": "^0.3.1",
     "gulp-rename": "^1.2.2",
     "uglify-js": "^2.7.5"
+  },
+  "dependencies": {
+    "arcgis-js-api": "^4.5.0"
   }
 }

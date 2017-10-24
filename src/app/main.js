@@ -1,11 +1,24 @@
 define([
+  "esri/config",
+  "esri/core/sniff",
   "esri/Map",
   "esri/views/SceneView",
   "esri/widgets/Search"
 ], function (
+  esriConfig, has,
   Map, SceneView,
   Search
 ) {
+
+  //app/main.js
+  if (!has("dojo-built")){
+    esriConfig.workers.loaderConfig = {
+      paths: {
+        "esri": "../arcgis-js-api"
+      }
+    };
+  }
+
   var map = new Map({
     basemap: "streets-night-vector",
     ground: "world-elevation"
